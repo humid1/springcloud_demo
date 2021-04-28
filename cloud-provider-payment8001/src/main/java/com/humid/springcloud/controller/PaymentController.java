@@ -31,10 +31,10 @@ public class PaymentController {
 
     @GetMapping("/get/{id}")
     public CommonResult getById(@PathVariable("id") Long id) {
-        Payment paymentById = paymentService.getPaymentById(id);
-        if (null == paymentService) {
-            return new CommonResult(500, "没有对应记录");
+        Payment payment = paymentService.getPaymentById(id);
+        if (null == payment) {
+            return new CommonResult(519, "没有对应记录");
         }
-        return new CommonResult(200, "查询成功", paymentById);
+        return new CommonResult(200, "查询成功", payment);
     }
 }
