@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.humid.springcloud.dao.PaymentDao">
+    <insert id="create" parameterType="com.humid.springcloud.entities.Payment" useGeneratedKeys="true" keyProperty="id">
+        insert into payment(create_time, serial) values (now(), #{serial})
+    </insert>
+    <select id="getPaymentById" resultType="com.humid.springcloud.entities.Payment">
+        select
+            id,
+            serial,
+            create_time createTime,
+            update_time updateTime
+        from
+            payment
+        where id = #{id}
+    </select>
+</mapper>
