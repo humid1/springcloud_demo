@@ -19,7 +19,7 @@ public class PaymentController {
     private PaymentService paymentService;
 
     @PostMapping("/create")
-    public CommonResult create(Payment payment) {
+    public CommonResult create(@RequestBody Payment payment) {
         int i = paymentService.create(payment);
         log.info("插入结果是:{}", i);
         if (i > 0) {
