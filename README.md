@@ -31,3 +31,7 @@
 
 ## cloud-api-commons
 公共调用模块
+
+## cloud-eureka-server7001
+eureka注册中心服务
+
