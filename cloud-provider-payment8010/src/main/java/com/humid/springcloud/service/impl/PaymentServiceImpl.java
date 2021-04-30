@@ -1,7 +1,7 @@
 package com.humid.springcloud.service.impl;
 
-import com.humid.springcloud.mapper.PaymentMapper;
 import com.humid.springcloud.entities.Payment;
+import com.humid.springcloud.mapper.PaymentMapper;
 import com.humid.springcloud.service.PaymentService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
