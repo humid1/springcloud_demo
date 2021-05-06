@@ -1,0 +1,9 @@
+server:
+  port: 8011
+spring:
+  application:
+    # 服务别名注册到 zookeeper
+    name: cloud-provider-payment
+  cloud:
+    zookeeper:
+      connect-string: 127.0.0.1:2181
