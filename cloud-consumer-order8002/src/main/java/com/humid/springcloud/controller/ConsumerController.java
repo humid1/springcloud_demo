@@ -4,6 +4,7 @@ import com.humid.springcloud.entities.CommonResult;
 import com.humid.springcloud.entities.Payment;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.client.RestTemplate;
 
@@ -30,5 +31,15 @@ public class ConsumerController {
     @GetMapping("/get/{id}")
     public CommonResult getPayById(@PathVariable("id") Long id) {
         return restTemplate.getForObject(PAYMENT_URL + "payment/get/" + id, CommonResult.class);
+    }
+
+    @GetMapping("/getForEntity/{id}")
+    public CommonResult getPayByForId(@PathVariable("id") Long id) {
+        ResponseEntity<CommonResult> forEntity = restTemplate.getForEntity(PAYMENT_URL + "payment/get/" + id, CommonResult.class);
+        if (forEntity.getStatusCode().is2xxSuccessful()) {
+            return forEntity.getBody();
+        } else {
+            return new CommonResult(444, "操作失败！");
+        }
     }
 }
