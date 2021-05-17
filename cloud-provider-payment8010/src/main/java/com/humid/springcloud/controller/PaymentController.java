@@ -49,6 +49,11 @@ public class PaymentController {
         return new CommonResult(200, "查询成功,server-port:" + serverPort, payment);
     }
 
+    @GetMapping("/get/lb")
+    public String getLb() {
+        return serverPort;
+    }
+
     @Autowired
     private DiscoveryClient discoveryClient;
 
