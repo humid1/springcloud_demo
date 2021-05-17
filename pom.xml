@@ -19,6 +19,7 @@
         <module>cloud-consumerzk-order8003</module>
         <module>cloud-providerconsul-payment8012</module>
         <module>cloud-consumerconsul-order8004</module>
+        <module>cloud-consumer-feign-order8005</module>
     </modules>
 
     <!-- 统一jar包版本管理 -->

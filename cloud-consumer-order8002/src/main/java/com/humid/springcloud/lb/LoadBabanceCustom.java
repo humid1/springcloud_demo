@@ -1,8 +1,6 @@
 package com.humid.springcloud.lb;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cloud.client.ServiceInstance;
-import org.springframework.cloud.client.discovery.DiscoveryClient;
 import org.springframework.stereotype.Component;
 
 import java.util.List;
@@ -29,6 +27,14 @@ public class LoadBabanceCustom implements ILoadBalance{
         return next;
     }
 
+
+    /**
+     * 默认负载轮训算法:
+     *  rest接口第几次请求数 % 服务器集群总数量 = 实际调用服务器位置下标，
+     *  每次服务重启动后rest接口计数从1开始。
+     * @param instanceList
+     * @return
+     */
     @Override
     public ServiceInstance instances(List<ServiceInstance> instanceList) {
         int index = getAndIncrement() % instanceList.size();

@@ -43,3 +43,6 @@ eureka集群注册中心2
 
 ## cloud-providerconsul-payment8012 / cloud-consumerconsul-order8004
 整合 consul
+
+## cloud-consumer-feign-order8005
+使用 openFeign 服务调用
