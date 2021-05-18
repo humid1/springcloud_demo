@@ -20,6 +20,8 @@
         <module>cloud-providerconsul-payment8012</module>
         <module>cloud-consumerconsul-order8004</module>
         <module>cloud-consumer-feign-order8005</module>
+        <module>cloud-provider-hystrix-payment8001</module>
+        <module>cloud-consumer-feign-hystrix-order8002</module>
     </modules>
 
     <!-- 统一jar包版本管理 -->
