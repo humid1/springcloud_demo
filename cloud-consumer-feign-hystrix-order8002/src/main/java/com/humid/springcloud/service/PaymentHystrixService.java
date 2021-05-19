@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
  * @author qiujianping
  * @date Created in 2021/5/18 14:51
  */
-@FeignClient(name = "cloud-provider-hystrix-payment")
+@FeignClient(name = "cloud-provider-hystrix-payment", fallbackFactory = PaymentFallbackServiceImpl.class)
 @RequestMapping("/payment")
 public interface PaymentHystrixService {
     @GetMapping("/hystrix/ok/{id}")
