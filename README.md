@@ -46,3 +46,15 @@ eureka集群注册中心2
 
 ## cloud-consumer-feign-order8005
 使用 openFeign 服务调用
+
+## cloud-provider-hystrix-payment8001
+使用 hystrix 快速搭建服务提供者
+
+## cloud-consumer-feign-hystrix-order8002
+使用 hystrix 内整合的 openfeign 使用的消费者
+
+## cloud-consumer-hystrix-dashboard9001
+hystrix-dashboard 服务熔断/降级，监控服务
+
+## cloud-gateway-server9527
+整合使用 SpringCloud Gateway
