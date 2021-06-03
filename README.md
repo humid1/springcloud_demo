@@ -58,3 +58,15 @@ hystrix-dashboard 服务熔断/降级，监控服务
 
 ## cloud-gateway-server9527
 整合使用 SpringCloud Gateway
+
+## cloud-config-center-3344
+config 配置中心，使用bus消息总线，修改配置中心的配置可使用执行以下命令直接刷新
+```shell
+# 全局刷新
+curl -X POST "http://localhost:3344/actuator/bus-refresh"
+# 单个服务刷新追加 （服务名:端口号）
+curl -X POST "http://localhost:3344/actuator/bus-refresh/config-client:3355"
+```
+
+## cloud-config-client-3355 / cloud-config-client-3356
+config 客户端，读取配置中心的配置信息。
