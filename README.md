@@ -60,7 +60,7 @@ hystrix-dashboard 服务熔断/降级，监控服务
 整合使用 SpringCloud Gateway
 
 ## cloud-config-center-3344
-config 配置中心，使用bus消息总线，修改配置中心的配置可使用执行以下命令直接刷新
+config 配置中心，使用bus消息总线(需添加RabbitMQ配置信息)，修改配置中心的配置可使用执行以下命令直接刷新
 ```shell
 # 全局刷新
 curl -X POST "http://localhost:3344/actuator/bus-refresh"
@@ -70,3 +70,11 @@ curl -X POST "http://localhost:3344/actuator/bus-refresh/config-client:3355"
 
 ## cloud-config-client-3355 / cloud-config-client-3356
 config 客户端，读取配置中心的配置信息。
+
+## cloud-stream-rabbitmq-provider8801
+<a href="https://docs.spring.io/spring-cloud-stream/docs/current/reference/html/index.html" target="_blank">官网地址</a>  
+前提：安装RabbitMQ  
+服务为 stream 生产端
+
+## cloud-stream-rabbitmq-consumer8802
+服务为 stream 消费端
