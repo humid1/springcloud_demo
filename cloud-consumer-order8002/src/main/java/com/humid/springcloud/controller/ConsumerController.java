@@ -24,7 +24,7 @@ import java.util.List;
 public class ConsumerController {
 
     // public static final String PAYMENT_URL = "http://127.0.0.1:8001/";
-    public static final String PAYMENT_URL = "http://CLOUD-PROVIDER-SERVICE/";
+    public static final String PAYMENT_URL = "http://cloud-provider-service/";
 
     @Autowired
     private RestTemplate restTemplate;
@@ -64,5 +64,12 @@ public class ConsumerController {
         ServiceInstance instances1 = loadBabanceCustom.instances(instances);
         URI uri = instances1.getUri();
         return restTemplate.getForObject(uri + "payment/get/lb", String.class);
+    }
+
+    // ====================> zipkin+sleuth
+    @GetMapping("/payment/zipkin")
+    public String paymentZipkin() {
+        String result = restTemplate.getForObject(PAYMENT_URL + "payment/zipkin", String.class);
+        return result;
     }
 }
