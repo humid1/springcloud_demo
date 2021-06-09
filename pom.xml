@@ -29,6 +29,9 @@
         <module>cloud-config-client-3356</module>
         <module>cloud-stream-rabbitmq-provider8801</module>
         <module>cloud-stream-rabbitmq-consumer8802</module>
+        <module>cloudalibaba-provider-payment9001</module>
+        <module>cloudalibaba-consumer-nacos-order9051</module>
+        <module>cloudalibaba-config-nacos-client3377</module>
     </modules>
 
     <!-- 统一jar包版本管理 -->
@@ -110,6 +113,7 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
+                <version>${spring-boot.version}</version>
                 <configuration>
                     <fork>true</fork>
                     <addResources>true</addResources>

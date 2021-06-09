@@ -1,0 +1,11 @@
+server:
+  port: 9051
+spring:
+  application:
+    name: nacos-order-consumer
+  cloud:
+    nacos:
+      discovery:
+        server-addr: http://127.0.0.1:8848
+server-url:
+  nacos-user-server: http://nacos-payment-provider
