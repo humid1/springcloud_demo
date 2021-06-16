@@ -15,5 +15,5 @@ spring:
         file-extension: yml
         # 分组
         #group: DEV_GROUP
-        # 命名空间
-        #namespace: 7d8f0f5a-6a53-4785-9686-dd460158e5d4
+        # 命名空间（须填写 nacos 中对应的命名空间id）
+        namespace: ebe4e416-2dbd-4021-a177-8024da49a383
