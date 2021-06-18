@@ -19,4 +19,9 @@ public class Payment {
     private String updateTime;
 
     private String serial;
+
+    public Payment(Long id, String serial) {
+        this.id = id;
+        this.serial = serial;
+    }
 }
