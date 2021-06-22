@@ -10,6 +10,14 @@ spring:
     sentinel:
       transport:
         dashboard: 127.0.0.1:8718
+      datasource: #<---------------------------关注点，添加Nacos数据源配置
+        ds1:
+          nacos:
+            server-addr: 192.168.56.1:8848
+            dataId: cloudalibaba-sentinel-service
+            groupId: DEFAULT_GROUP
+            data-type: json
+            rule-type: flow
 
 management:
   endpoints:
