@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.humid.springcloud.mapper.OrderMapper">
+    <insert id="create">
+        insert into t_order (create_time, user_id, product_id, count, money, status)
+        values (now(), #{userId}, #{productId}, #{count}, #{money}, 0);
+    </insert>
+    <update id="update">
+        update t_order set status = 1, update_time = now()
+        where user_id=#{userId} and status = #{status};
+    </update>
+</mapper>
