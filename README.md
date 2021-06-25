@@ -79,9 +79,19 @@ config 客户端，读取配置中心的配置信息。
 ## cloud-stream-rabbitmq-consumer8802
 服务为 stream 消费端
 
-## cloudalibaba-provider-payment9001
-整合SpringCloud Alibaba
-nacos 服务提供者
+## nacos 服务注册发现、配置中心
+<a href="https://nacos.io/zh-cn/" target="_blank">nacos 官网地址</a>
+* cloudalibaba-provider-payment9001 整合SpringCloud Alibaba / nacos 服务提供者  
+* cloudalibaba-consumer-nacos-order9051 nacos 服务消费者，测试负载均衡  
 
-## cloudalibaba-consumer-nacos-order9051
-nacos 服务消费者，测试负载均衡
+## sentinel 分布式流控/服务降级、熔断
+<a href="https://github.com/alibaba/Sentinel/" target="_blank">sentinel 官方地址</a>
+* cloudalibaba-sentinel-service8401 测试熔断降级  
+* cloudalibaba-provider-payment9003 服务提供者  
+* cloudalibaba-consumer-nacos-order9052 服务消费者，整合openFeign
+
+## seata 分布式事务
+<a href="http://seata.io/zh-cn/" target="_blank">seata 官网地址</a>  
+* cloud-seata-order-service2001 订单服务  
+* cloud-seata-storage-service2002 库存服务  
+* cloud-seata-account-service2003 账户余额服务
